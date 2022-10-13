@@ -20,3 +20,15 @@
         transform: translateX(-2000px);
     }
 }
+.dot{
+    
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbc;
+    border-radius: 50%;
+    display: inline-block;
+}
+#dotBox{
+    text-align: center;
+}
