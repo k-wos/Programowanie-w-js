@@ -1,0 +1,18 @@
+body{
+    height: 100%;
+    margin: 0 auto;
+}
+
+.notes{
+    display:flex;
+    height: 100%;
+}
+
+.add_note{
+    background: #008365;
+    color:#fff;
+    width:100%;
+}
+.note_body{
+    flex-grow:1;
+}

@@ -4,16 +4,16 @@ function onKeyPress(event){
     const key = event.key
     let sound = ''
     switch(key){
-        case 'a':
+        case 'q':
             sound = 'clap'
             break
         case 'w':
             sound = 'kick'
             break
-        case 's':
+        case 'e':
             sound = 'boom'
             break
-        case 'd':
+        case 'r':
             sound = 'snare'
             break
     }
@@ -30,3 +30,6 @@ function playSound(sound){
     audioTag.play()
    
 }
+var song = [];
+
+function startRecording()
