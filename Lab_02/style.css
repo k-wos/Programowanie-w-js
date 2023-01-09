@@ -1,34 +1,38 @@
 #slider {
-    width: 600px;
-    height: 400px;
-    margin: 100px auto 0 auto;
+    position: relative;
     overflow: hidden;
-}
-#slider .slides {
-    display: flex;
-    animation-name: pociag-w-lewo;
-    animation-duration: 4s;
-    animation-delay: 1s;
-    animation-timing-function: ease-in-out;
+    width:600px;
+    height: 400px;
+    
+
 }
 
-@keyframes pociag-w-lewo {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-2000px);
-    }
-}
-.dot{
-    
-    cursor:pointer;
-    height: 15px;
-    width: 15px;
-    background-color: #bbc;
-    border-radius: 50%;
-    display: inline-block;
-}
-#dotBox{
+#slider .img{
+    position:absolute;
+    left: 600px;
+    animation: slide 10s linear infinite;
     text-align: center;
+    justify-content: center;
 }
+
+@keyframes slide{
+    from{left: 600px;}
+    to{left: -600px}
+}
+button.previous::before{
+    content: "\276E";
+    font-size: 1.5em;
+}
+button.next::after{
+    content: "\276F";
+    font-size: 1.55em;
+}
+
+#dotBox .dot{
+    display: inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background-color: grey;    
+}
+
