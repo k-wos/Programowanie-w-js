@@ -8,33 +8,20 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
+        <div class=" form-container">
             <h1>Notatki</h1>
-            <form>
-                <input type="text" id="title" placeholder="Tytuł">
-                <textarea id="content" placeholder="Treść"></textarea>
-                <input type="color" id="color">
-                <input type="checkbox" id="pin">
-                <button id="add">Dodaj notatkę</button>
+            <form id="form">
+                <input type="text" id="title" placeholder="Tytuł"><br>
+                <textarea id="content" placeholder="Treść"></textarea><br>
+                <input type="color" id="color"><br>
+                <label for='pin'>Przypnij</label>
+                <input type="checkbox" id="pin"><br>
+                <button type="submit" id="add">Dodaj notatkę</button>
             </form>
         </div>
-    </header>
-
-    <section>
-        <div class="container">
-            <h2>Zapisane notatki</h2>
-            <div id="notes">
-                <div class="note">
-                    <h3 class="title">$element.title</h3>
-                    <p class="content">$element.text</p>
-                    <p class="createDate"></p>
-                    <button class="delete">Usuń notatkę</button>
-                    <button class="edit">Edytuj notatkę</button>
-                </div>
-            </div>
+        <div class="notes-container">
+            <ul></ul>
         </div>
-    </section>
 
     <script src="notes.js"></script>
 </body>
