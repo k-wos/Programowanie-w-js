@@ -1,34 +1,27 @@
-const canvas = document.querySelector('#canvas');
-
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const holeX = 50;
-const holeY = 50;
+let ball = {x:150, y: 150, radius: 10, velX: 5, velY:5};
+let hole = {x:250, y: 250, radius: 20};
 
-let ballX = 0;
-let ballY =0;
+window.addEventListener("deviceorientation", DeviceMove);
 
-const radius = 25;
-
-ctx.beginPath();
-ctx.arc(ballX,ballY,radius,0,Math.PI*2);
-ctx.fillStyle = '#AAA';
-ctx.fill();
-
-let startTime = null;
-
-let records = [];
-
-function handleMove(event){
-    ballX = event.gamma;
-    ballY = event.beta;
+function DeviceMove(event){
+    ball.velX = event.gamma / 90;
+    ball.velY = event.beta / 90;
 }
 
-if(ballX === holeX && ballY ===holeY){
-    let endTime = Date.now();
-    let timeElapsed = endTime - startTime;
-    records.push(timeElapsed);
+function drawBallAndHole(){
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.arc(ball.x,ball.y,ball.radius,0,2*Math.PI);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(hole.x,hole.y,hole.radius,0,2*Math.PI);
+    ctx.stroke();
+    ball.x += ball.velX;
+    ball.y += ball.velY;
+    requestAnimationFrame(drawBallAndHole);
+    
 }
-
-
-window.addEventListener('deviceorientation', handleMove);
+drawBallAndHole();
