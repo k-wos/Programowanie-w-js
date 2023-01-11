@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>NotePocket</title>
 </head>
+
 <body>
-    <div class="notes">
-        <button class="add_note" type="button">Dodaj notatkę</button>
-        <div class="note_list">
-            <input type="text" class="note_title" placeholder="Wprowadź tytuł notatki">
-            <textarea class="note_body">Treść.....</textarea>
+    <header>
+        <div class="container">
+            <h1>Notatki</h1>
+            <form>
+                <input type="text" id="title" placeholder="Tytuł">
+                <textarea id="content" placeholder="Treść"></textarea>
+                <input type="color" id="color">
+                <input type="checkbox" id="pin">
+                <button id="add">Dodaj notatkę</button>
+            </form>
         </div>
-    </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Zapisane notatki</h2>
+            <div id="notes">
+                <div class="note">
+                    <h3 class="title">$element.title</h3>
+                    <p class="content">$element.text</p>
+                    <p class="createDate"></p>
+                    <button class="delete">Usuń notatkę</button>
+                    <button class="edit">Edytuj notatkę</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="notes.js"></script>
 </body>
+
 </html>
