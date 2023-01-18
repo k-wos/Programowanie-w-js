@@ -1,8 +1,31 @@
+
+
 .slider{
     width: 100%;
     overflow: hidden;
 }
 .photo{
     width:100%;
-    float:left;
+    text-align: center;
+}
+.dots{
+    list-style:none;
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: gray;
+    cursor: pointer;
+}
+.next{
+    float:right;
+}
+
+.dot.active{
+    background-color: black;
 }
