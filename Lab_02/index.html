@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>Slider</title>
 </head>
-
 <body>
-    <div id="slider">
-        <img src="http://picsum.photos/seed/picsum/600/400" alt="" class="img" data-index="1">
-        <img src="https://picsum.photos/id/237/600/400" alt="" class="img" data-index="2">
-        <img src="https://picsum.photos/600/400?grayscale" alt="" class="img" data-index="3">
-        <img src="https://picsum.photos/600/400" alt="" class="img" data-index="4">
-        <img src="http://picsum.photos/seed/picsum/600/400" alt="" class="img" data-index="5">
-        <img src="http://picsum.photos/seed/picsum/600/400" alt="" class="img" data-index="6">
+    <div class="slider">
+        <div class="photo">Zdjęcie 1</div>
+        <div class="photo">Zdjęcie 2</div>
+        <div class="photo">Zdjęcie 3</div>
+        <div class="photo">Zdjęcie 4</div>
+
+        <button class="previous">Poprzednie</button>
+        <button class="next">Następne</button>
     </div>
-    <button class="previous">Prev</button>
-    <button class="next">Next</button>
-    <div id="dotBox">
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
-        <span class="dot" data-index="3"></span>
-        <span class="dot" data-index="4"></span>
-        <span class="dot" data-index="5"></span>
-        <span class="dot" data-index="6"></span>
-    </div>
-    
-    <main>
-    </main>
+
     <script src="main.js"></script>
 </body>
-
 </html>

@@ -15,23 +15,13 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=b
   const tempValue = data.main.temp;
   const humidity = data.main.humidity;
   const weather = data.weather[0].main;
-  let iconClass = '';
-
- if(weather === 'Clear'){
-  iconClass = 'sunny';
- }else if(weather ==='Clouds'){
-  iconClass = 'cloudy';
- }else if(weather ==="Rain"){
-  iconClass="rainy";
- }else if(weather === "Snow"){
-  iconClass = "snowy";
- }
+  
 
  card.innerHTML = `
  <h1>${city}</h2>
  <p> Temperatura: ${tempValue}</p>
  <p> Wilgotność: ${humidity}</p>
- <p class="{iconClass}">${weather}</p>`;
+ <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">`;
 
 })
 

@@ -1,38 +1,8 @@
-#slider {
-    position: relative;
+.slider{
+    width: 100%;
     overflow: hidden;
-    width:600px;
-    height: 400px;
-    
-
 }
-
-#slider .img{
-    position:absolute;
-    left: 600px;
-    animation: slide 10s linear infinite;
-    text-align: center;
-    justify-content: center;
+.photo{
+    width:100%;
+    float:left;
 }
-
-@keyframes slide{
-    from{left: 600px;}
-    to{left: -600px}
-}
-button.previous::before{
-    content: "\276E";
-    font-size: 1.5em;
-}
-button.next::after{
-    content: "\276F";
-    font-size: 1.55em;
-}
-
-#dotBox .dot{
-    display: inline-block;
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background-color: grey;    
-}
-

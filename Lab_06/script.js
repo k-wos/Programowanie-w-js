@@ -4,6 +4,9 @@ const ctx = canvas.getContext('2d');
 let ball = {x:150, y: 150, radius: 10, velX: 5, velY:5};
 let hole = {x:250, y: 250, radius: 20};
 
+const maxX = canvas.clientWidth - ball.clientWidth;
+const maxY = canvas.clientHeight - ball.clientHeight;
+
 window.addEventListener("deviceorientation", DeviceMove);
 
 function DeviceMove(event){
