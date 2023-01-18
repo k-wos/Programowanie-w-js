@@ -12,14 +12,14 @@ submit.addEventListener('click', function(){
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ba8a44cc3e29fadbb7c98a3929eea5bb')
 .then(response => response.json())
 .then(data => {
-  const tempValue = data.main.temp;
+  const tempValue = Math.round(data.main.temp)-273;
   const humidity = data.main.humidity;
   const weather = data.weather[0].main;
   
 
  card.innerHTML = `
  <h1>${city}</h2>
- <p> Temperatura: ${tempValue}</p>
+ <p> Temperatura: ${tempValue} ℃</p>
  <p> Wilgotność: ${humidity}</p>
  <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">`;
 

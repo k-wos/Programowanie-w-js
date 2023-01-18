@@ -2,12 +2,6 @@ body{
     margin: 0 auto;
 }
 
-.card p{
-    float:left;
-    margin-right: 15px;
-    
-}
-
-.rainy{
-    color: blue;
+#card{
+    text-align:center;
 }

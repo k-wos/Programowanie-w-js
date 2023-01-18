@@ -24,3 +24,14 @@ form button{
     background-color: aquamarine;
     width:50%;
 }
+.notes-container{
+    position:relative;
+    float:left;
+    width:200px;
+    height:200px;
+    text-align: center;
+}
+li{
+    border:1px solid black;
+    margin-bottom:10px;
+}
