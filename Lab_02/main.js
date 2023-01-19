@@ -41,12 +41,14 @@ function showSlides(n){
     }
 
     for(let i = 0; i<slides.length ;i++){
+
         slides[i].style.display = "none";
         dots.childNodes[i].classList.remove("active");
     }
-
     slides[index - 1].style.display="block";
     dots.childNodes[index - 1].classList.add("active");
+
+   
 }
 
 

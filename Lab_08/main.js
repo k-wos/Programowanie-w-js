@@ -29,7 +29,7 @@ for (let i = 0; i<numOfBalls; i++ ){
     circles.push(circle)
 }
 animate();
-console.log(Y)
+
 };
 
 function animate( ){

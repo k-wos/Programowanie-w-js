@@ -29,3 +29,19 @@
 .dot.active{
     background-color: black;
 }
+
+.photo.animated{
+    position:absolute;
+    left:0;
+    top:0;
+    transform-origin: right;
+    transition: all 1s ease;
+}
+.photo.animated-right{
+    left: -100%;
+    transform:translateX(-100%);
+}
+
+.photo.hide{
+    visibility: hidden;
+}
